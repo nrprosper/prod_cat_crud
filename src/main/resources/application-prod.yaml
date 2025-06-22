@@ -17,3 +17,7 @@ cloudinary:
   api_key: ${CLOUDINARY_KEY}
   api_secret: ${CLOUDINARY_SECRET}
   cloud_name: ${CLOUDINARY_NAME}
+
+springdoc:
+  swagger-ui:
+    path: /docs.html
