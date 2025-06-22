@@ -1,15 +1,24 @@
 services:
   - type: web
-    name: web-prod-cat
+    name: crud-api
     env: docker
-    image:
+    image: docker.io/nprosper/crud:latest
     envVars:
-      # Database Configuration
-      - key: DB_USER
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+
+      # PostgreSQL Config
+      - key: SPRING_DATASOURCE_USERNAME
         value: ${{ secrets.DB_USER }}
-      - key: DB_PASSWORD
+      - key: SPRING_DATASOURCE_PASSWORD
         value: ${{ secrets.DB_PASSWORD }}
-      - key: DB
-        value: ${{ secrets.DB }}
-      - key: DATABASE_URL
+      - key: DB_URL
         value: ${{ secrets.DB_URL }}
+
+      # Cloudinary Config
+      - key: CLOUDINARY_KEY
+        value: ${{ secrets.CLOUDINARY_API_KEY }}}
+      - key: CLOUDINARY_SECRET
+        value: ${{ secrets.CLOUDINARY_API_SECRET }}
+      - key: CLOUDINARY_NAME
+        value: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
