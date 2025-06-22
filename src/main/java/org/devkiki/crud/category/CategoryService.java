@@ -14,8 +14,8 @@ public class CategoryService {
         Category category = new Category();
         category.setName(dto.getName());
         category.setDescription(dto.getDescription());
-        category.getImage().setUrl(dto.getImageUrl());
-        category.getImage().setPublicId(dto.getImagePublicId());
+        category.getImage().setUrl(dto.getImage().getUrl());
+        category.getImage().setPublicId(dto.getImage().getPublicId());
         return categoryRepository.save(category);
     }
 

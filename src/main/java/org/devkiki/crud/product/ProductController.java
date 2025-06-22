@@ -38,15 +38,15 @@ public class ProductController {
     }
 
     @Operation(summary = "Get product by Id")
-    @GetMapping
-    public ResponseEntity<Product> getProductById(@RequestParam Long id) {
+    @GetMapping("/{id}")
+    public ResponseEntity<Product> getProductById(@PathVariable Long id) {
         var product = productService.getProductById(id);
         return ResponseEntity.ok(product);
     }
 
     @Operation(summary = "Delete a product")
-    @DeleteMapping
-    public ResponseEntity<?> deleteProductById(@RequestParam Long id) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteProductById(@PathVariable Long id) {
         productService.deleteProductById(id);
         return ResponseEntity.noContent().build();
     }
