@@ -17,7 +17,7 @@ services:
 
       # Cloudinary Config
       - key: CLOUDINARY_KEY
-        value: ${{ secrets.CLOUDINARY_API_KEY }}}
+        value: ${{ secrets.CLOUDINARY_API_KEY }}
       - key: CLOUDINARY_SECRET
         value: ${{ secrets.CLOUDINARY_API_SECRET }}
       - key: CLOUDINARY_NAME
