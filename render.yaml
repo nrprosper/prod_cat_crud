@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: web-prod-cat
+    env: docker
+    image:
+    envVars:
+      # Database Configuration
+      - key: DB_USER
+        value: ${{ secrets.DB_USER }}
+      - key: DB_PASSWORD
+        value: ${{ secrets.DB_PASSWORD }}
+      - key: DB
+        value: ${{ secrets.DB }}
+      - key: DATABASE_URL
+        value: ${{ secrets.DB_URL }}
