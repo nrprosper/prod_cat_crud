@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: product_crud
+  profiles:
+    active: prod
+  datasource:
+    url: jdbc:h2:mem:prod-crud
+    driver-class-name: org.h2.Driver
+    username: devkiki
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
