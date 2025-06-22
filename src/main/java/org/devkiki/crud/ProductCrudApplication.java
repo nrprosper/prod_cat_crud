@@ -13,8 +13,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
                         name = "Nishimwe Rukundo Prosper",
                         email = "prosper.rk1@gmail.com"
                 ),
-                description = "API Documentation for Role Based Authentication",
-                title = "RBA Authentication",
+                description = "API Documentation basic CRUD Operation and File uploading",
+                title = "CRUD API Documentation",
                 version = "v.1.0"
         ),
         servers = {
