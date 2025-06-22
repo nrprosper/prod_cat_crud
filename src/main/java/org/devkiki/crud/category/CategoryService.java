@@ -1,6 +1,7 @@
 package org.devkiki.crud.category;
 
 import lombok.RequiredArgsConstructor;
+import org.devkiki.crud.common.Image;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,10 +13,12 @@ public class CategoryService {
 
     public Category create(CreateCategoryDto dto) {
         Category category = new Category();
+        Image image = new Image();
+        image.setUrl(dto.getImage().getUrl());
+        image.setPublicId(dto.getImage().getPublicId());
         category.setName(dto.getName());
         category.setDescription(dto.getDescription());
-        category.getImage().setUrl(dto.getImage().getUrl());
-        category.getImage().setPublicId(dto.getImage().getPublicId());
+        category.setImage(image);
         return categoryRepository.save(category);
     }
 
